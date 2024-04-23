@@ -1,0 +1,20 @@
+spring:
+  main:
+    banner-mode: off
+  sql:
+    init:
+      platform: hsqldb
+      mode: always
+  datasource:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    url: jdbc:hsqldb:mem:testdb;sql.syntax_ora=true;DB_CLOSE_DELAY=-1;shutdown=true
+    username: sa
+    password: sa
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    defer-datasource-initialization: true
+logging:
+  level:
+    org.springframework.security: TRACE
